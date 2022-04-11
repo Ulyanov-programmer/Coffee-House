@@ -12,6 +12,10 @@ body {
 	font adapt-fsize($mainFontSize, $minFontSize) var(--main-font-family);
 	background var(--bg);
 
+	@media (min-width 850px) {
+		overflow hidden;
+	}
+
 	&.scroll-block {
 		overflow hidden;
 	}
@@ -36,7 +40,7 @@ body {
 		grid-template-columns 160px auto;
 		grid-template-rows 90px auto;
 		align-items start;
-		gap 40px;
+		gap 30px;
 		padding 40px;
 
 		@media (max-width 1040px) {
@@ -193,6 +197,13 @@ body {
 }
 
 .products {
+	@media (min-width 850px) {
+		overflow auto;
+		height 72vh;
+		padding 20px;
+		margin-left -20px;
+	}
+
 	&__body {
 		display grid;
 		grid-template 'coffe coffe coffe' 1fr / 1fr 1fr 1fr;

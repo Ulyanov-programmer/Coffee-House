@@ -637,7 +637,7 @@ body button {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  gap: 40px;
+  gap: 30px;
   padding: 40px;
 }
 
@@ -1014,8 +1014,19 @@ body button {
 }
 
 @media (min-width: 850px) {
+  body {
+    overflow: hidden;
+  }
+
   .main__menu {
     grid-row: span 2;
+  }
+
+  .products {
+    overflow: auto;
+    height: 72vh;
+    padding: 20px;
+    margin-left: -20px;
   }
 
   .menu-slider__slider {
