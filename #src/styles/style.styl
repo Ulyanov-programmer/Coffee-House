@@ -2,25 +2,22 @@
 @import '_vars';
 @import '_mixins';
 @import '_fonts';
-@import 'modules/_submenu';
-@import 'modules/_spoiler';
 @import 'modules/_sidebar';
 @import 'modules/_searchbar';
-@import 'modules/_fsNavmenu';
 @import '_general';
-@import '_footer';
-@import '_header';
 
 body {
 	height 100%;
 	color var(--text-c);
 	font adapt-fsize($mainFontSize, $minFontSize) var(--main-font-family);
-	
+	background var(--bg);
+
 	&.scroll-block {
 		overflow hidden;
 	}
 
 	button {
+		font-size adapt-fsize($mainFontSize, $minFontSize);
 		font-family var(--main-font-family);
 		color var(--text-c);
 	}
@@ -28,9 +25,381 @@ body {
 
 .main {
 	background var(--bg);
+	transition all 0.3s ease;
+
+	&.paranja {
+		filter brightness(80%);
+	}
 
 	&__body {
+		display grid;
+		grid-template-columns 160px auto;
+		grid-template-rows 90px auto;
+		align-items start;
+		gap 40px;
+		padding 40px;
+
+		@media (max-width 1040px) {
+			padding 20px;
+		}
+
+		@media (max-width $to-mobile-mod-width) {
+			grid-template 'top-menu' auto 'nav-menu' auto 'products' auto / 100%;
+		}
+
+		@media (max-width 640px) {
+			gap 20px;
+		}
+	}
+
+	&__menu {
+		position sticky;
+		top 10px;
+
+		@media (min-width $to-mobile-mod-width) {
+			grid-row span 2;
+		}
+
+		@media (max-width $to-mobile-mod-width) {
+			position static;
+		}
+	}
+
+	&__top-menu {
+		position sticky;
+		top 10px;
+
+		@media (max-width $to-mobile-mod-width) {
+			grid-area top-menu;
+			z-index 1;
+		}
+	}
+
+	&__products {
 	}
 }
 
-@import '_demoStyles';
+.top-menu {
+	&__body {
+		flex-set row nowrap;
+		justify-content center;
+		align-items center;
+		firstLevelElementsMargin 'right' 40;
+
+		@media (max-width $second-mobile-mod-width) {
+			justify-content space-between;
+		}
+	}
+
+	&__searchbar {
+		flex-grow 1;
+
+		@media (max-width $second-mobile-mod-width) {
+			display none;
+		}
+	}
+
+	&__search-btn {
+		@media (min-width $second-mobile-mod-width) {
+			display none;
+		}
+
+		background #DADADA;
+		padding 8px 35px;
+		border-radius 10px;
+	}
+}
+
+.cart {
+	&__body {
+		flex-set row nowrap;
+		justify-content center;
+		align-items center;
+		firstLevelElementsMargin 'right' 15;
+		padding 10px 15px;
+		background #f6f6f6;
+		border-radius 30px;
+
+		@media (max-width $second-mobile-mod-width) {
+			border-radius 10px;
+		}
+	}
+
+	&__bell {
+		position relative;
+		z-index 1;
+
+		&:hover, &:focus {
+			&:after {
+				background #DAC6B6;
+				block-size 80px;
+			}
+		}
+
+		&:after {
+			position absolute;
+			top 60%;
+			left 50%;
+			transform translate(-50%, -50%);
+			border-radius 50%;
+			z-index -1;
+			block-size 10px;
+			transition all 0.3s ease;
+			content '';
+		}
+	}
+
+	&__text {
+		font-size adapt-fsize(25, 20);
+		text-transform uppercase;
+	}
+
+	&__order-status {
+		&:hover, &:focus {
+			text-decoration underline;
+		}
+
+		@media (min-width 400px) {
+			firstLevelElementsMargin 'right' 15;
+		}
+	}
+
+	&__product-counter {
+		display inline-block;
+		position relative;
+		z-index 1;
+		color #fff;
+		padding 5px;
+		font-size 30px;
+
+		@media (max-width 400px) {
+			display none;
+		}
+
+		&.active {
+			&:before {
+				position absolute;
+				top 50%;
+				left 50%;
+				transform translate(-50%, -50%);
+				block-size 35px;
+				z-index -1;
+				background #CD4126;
+				border-radius 50%;
+				content '';
+			}
+		}
+	}
+}
+
+.products {
+	&__body {
+		display grid;
+		grid-template 'coffe coffe coffe' 1fr / 1fr 1fr 1fr;
+		gap 40px;
+
+		@media (min-width 1800px) {
+			grid-template 'coffe coffe coffe coffe' 1fr / 1fr 1fr 1fr 1fr;
+		}
+
+		@media (max-width 1430px) {
+			grid-template 'coffe coffe' 1fr / 1fr 1fr;
+		}
+
+		@media (max-width 640px) {
+			gap 20px;
+		}
+
+		@media (max-width 500px) {
+			grid-template 'coffe' 1fr / 1fr;
+		}
+	}
+}
+
+.product {
+	&__body {
+		display grid;
+		height 100%;
+		gap 20px;
+		padding 20px;
+		border-radius 30px;
+		background #fff;
+		border 5px solid rgba(255, 255, 255, 0);
+		color var(--text-c);
+		box-shadow 0 0 30px rgba(0, 0, 0, 0.1);
+		transition all 0.3s ease;
+
+		&:hover, &:focus {
+			border-color #DAC6B6;
+		}
+
+		@media (max-width 426px) {
+			padding 10px;
+		}
+	}
+
+	&__image {
+		flex-set row nowrap;
+		justify-content center;
+
+		img {
+			@media (max-width 1040px) {
+				block-size 209px;
+			}
+
+			@media (max-width $second-mobile-mod-width) {
+				block-size 159px;
+			}
+
+			@media (max-width 500px) {
+				block-size 259px;
+			}
+		}
+	}
+
+	&__title {
+		font-size adapt-fsize(40, 30);
+	}
+
+	&__footer {
+		flex-set row nowrap;
+		justify-content center;
+		align-items center;
+	}
+
+	&__actions {
+		display inline-flex;
+		justify-content center;
+		align-items center;
+		background #DADADA;
+		border-radius 12px;
+
+		&:hover, &:focus {
+			path {
+				fill #fff;
+			}
+		}
+	}
+
+	&__price {
+		font-family OpenSans;
+		font-weight 600;
+		padding 0 25px;
+
+		&.dolls {
+			&:before {
+				content '$';
+			}
+		}
+
+		&:before {
+			content '₹';
+		}
+	}
+
+	&__add-btn {
+		flex-set row nowrap;
+		align-items center;
+		justify-content center;
+		background #CD4126;
+		border-radius 12px;
+		padding 15px;
+
+		path {
+			transition all 0.3s ease;
+		}
+	}
+}
+
+.menu-slider {
+	&__body {
+	}
+
+	&__slider {
+		background #fff;
+
+		@media (min-width $to-mobile-mod-width) {
+			height 500px;
+		}
+
+		@media (max-width $to-mobile-mod-width) {
+			border-radius 20px;
+		}
+
+		@media (max-height 780px) and (min-width $to-mobile-mod-width) {
+			height 300px;
+		}
+	}
+
+	&__prev, &__next {
+		flex-set row nowrap;
+		justify-content center;
+		align-items center;
+		padding 44px 66px;
+		background #fff;
+
+		&:hover, &:focus {
+			path {
+				stroke-opacity 0.8;
+			}
+		}
+
+		@media (min-width $to-mobile-mod-width) {
+			width 100%;
+		}
+
+		@media (max-width $to-mobile-mod-width) {
+			display none;
+		}
+
+		path {
+			transition all 0.2s ease;
+		}
+	}
+
+	&__next {
+		border-bottom-left-radius 30px;
+		border-bottom-right-radius 30px;
+	}
+
+	&__prev {
+		border-top-left-radius 30px;
+		border-top-right-radius 30px;
+	}
+
+	&__element {
+	}
+}
+
+.menu-element {
+	flex-set column nowrap;
+	min-height 140px;
+	justify-content center;
+	align-items center;
+	firstLevelElementsMargin 'bottom' 15;
+	border 2px solid rgba(0, 0, 0, 0);
+	padding 20px;
+	background #fff;
+	border-radius 20px;
+
+	&.swiper-slide-active, &:hover, &:focus {
+		border-color #000;
+		background #DAC6B6;
+
+		.menu-element__image {
+			show();
+			overflow hidden;
+			height 50px;
+		}
+	}
+
+	&__image {
+		height 0;
+		hide();
+		transition all 0.3s ease;
+	}
+
+	&__name {
+		word-break break-word;
+	}
+}

@@ -1,0 +1,100 @@
+<section id="searchModal" class='modal-window'>
+	<div class="modal-window__body">
+		<div class="modal-window__content">
+			<form class="searchbar">
+				<input class="searchbar__input" type='text' placeholder='Browse your favourite coffee here..' required>
+				<button aria-label="search" class="searchbar__submit" type='submit'>
+					<img src="img/searchLoupe.svg" alt="search">
+				</button>
+			</form>
+		</div>
+	</div>
+</section>
+
+<aside id="sidebar" class="sidebar">
+	<div class="sidebar__body">
+		<div class="sidebar__header">
+			<span class="sidebar__status">Order Status</span>
+		</div>
+		<div class="sidebar__statuses">
+			<section class="sidebar__status status">
+				<div class="status__metadata">
+					<span class="status__title">Ordered</span>
+					<span id="orderedTime" class="status__time">JUST Now</span>
+				</div>
+				<div class="order-label">
+					<div class="order-label__coffe-preview">
+						<img src="img/orders/order1preview.png" loading='lazy' alt='Cinnamon and Cocoa' width=81 height=81>
+					</div>
+					<div class="order-label__title">Cinnamon and Cocoa</div>
+					<span class="order-label__count cart__product-counter active">2</span>
+				</div>
+			</section>
+			<section class="sidebar__status status">
+				<div class="status__metadata">
+					<span class="status__title">Preparing</span>
+					<span id="preparingTime" class="status__time">12 MINS AGO</span>
+				</div>
+				<div class="order-label">
+					<div class="order-label__coffe-preview">
+						<img src="img/orders/order2preview.png" loading='lazy' alt='Drizzled with caramel' width=80 height=80>
+					</div>
+					<div class="order-label__title">Drizzled with caramel</div>
+					<span class="order-label__count cart__product-counter active">1</span>
+				</div>
+				<div class="order-label">
+					<div class="order-label__coffe-preview">
+						<img src="img/orders/order3preview.png" loading='lazy' alt='Thai green ' width=80 height=80>
+					</div>
+					<div class="order-label__title">Thai green</div>
+					<span class="order-label__count cart__product-counter active">1</span>
+				</div>
+			</section>
+			<section class="sidebar__status status unactive">
+				<div class="status__metadata">
+					<span class="status__title">Finishing</span>
+				</div>
+			</section>
+			<section class="sidebar__status status unactive">
+				<div class="status__metadata">
+					<span class="status__title">Served</span>
+				</div>
+				<!-- If there is at least one order, add for this status class active. -->
+			</section>
+		</div>
+	</div>
+	<div class="sidebar__footer">
+		<div class="sidebar__price-calc-column price-calc-column">
+			<div class="price-calc-column__element">
+				<span class="price-calc-column__text">Subtotal</span>
+				<span class="price-calc-column__price">₹456.90</span>
+			</div>
+			<div class="price-calc-column__element">
+				<span class="price-calc-column__text">Discount -10%</span>
+				<span class="price-calc-column__price">₹45.69</span>
+			</div>
+			<div class="price-calc-column__element price-calc-column__finally">
+				<span class="price-calc-column__text">Total</span>
+				<span class="price-calc-column__price">₹411.21</span>
+			</div>
+		</div>
+		<div class="sidebar__close-row">
+			<button class='sidebar__close-footer toggle-sidebar' data-open-sidebar='sidebar' aria-label='close sidebar' type='button'>
+				<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="32" cy="32" r="32" fill="#CD4126" fill-opacity="0.8" />
+					<path d="M27 21L38 32L27 43" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</button>
+			<div class="sidebar__close-label">
+				<img src="img/threeDots.svg" loading='lazy' alt='' width=32 height=6>
+				<span>SLIDE TO CLOSE TABle</span>
+				<img src="img/threeDots.svg" loading='lazy' alt='' width=32 height=6>
+			</div>
+			<div class="sidebar__close-decor">
+				<img src="img/closeSidebarDecor.svg" loading='lazy' alt='' width=59 height=59>
+			</div>
+		</div>
+	</div>
+</aside>
+
+<div class="sidebar-swipe-wrapper"></div>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- maximum-scale=1.0, user-scalable=0 does not allow content to be scaled on Android. -->
+<!-- Disables forced link for phone number on iOS -->
+<meta name="format-detection" content="telephone=no">
+
+<meta name="description" content="Coffe house desc">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="./img/favicon.svg">
+<link rel="mask-icon" href="./img/favicon.svg" color="#000000">
+<!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+<!-- <link rel="manifest" href="manifest.json"> -->
+
+<!-- <link rel="preload" href="fonts/YourMainFont.woff2" as="font" crossorigin> -->
+
+<!-- SEO
+    <meta name="keywords" content="keyword1,">
+    <meta name="robots" content="none,noindex,nofollow,noimageindex,noarchive,nosnippet">
+    <meta name="Author" content="Author">
+    <meta name="Copyright" content="Copyright">
+    <meta name="Address" content="Address"> 
+    <! - Redirect (reload) the page. Delay in seconds; url=Site / page address ->
+    <meta http-equiv="refresh" content="seconds; url = URL">
+
+    Facebook
+    <! - site localization, for the Russian-language site ru_RU ->
+    <meta property="og:locale" content="ru_RU">
+    <! - content type, default is article ->
+    <meta property="og:type" content="article">
+    <! - the title of the page that will be displayed in the post of the social network ->
+    <meta property="og:title" content="META tags">
+    <! - page description ->
+    <meta property="og:description" content="Description of the page about META tags">
+    <! - link to the image that will be published in the post ->
+    <meta property="og:image" content="path">
+    <! - link to the current page ->
+    <meta property="og: url" content="path">
+    <! - site name ->
+    <meta property="og:site_name" content="Freelancer for life">
+
+    Twitter
+    <! - Map type, default is summary ->
+    <meta name="twitter: card" content="summary">
+    <! - Author name / login ->
+    <meta name="twitter: site" content="Ivan">
+    <! - Page title ->
+    <meta name="twitter: title" content="META tags">
+    <! - Page description ->
+    <meta name="twitter: description" content="about META tags">
+    <! - Link to image ->
+    <meta name="twitter: image" content="path">
+  -->
+
+
+<!--? Use this if you want set multiple files. -->
+<!-- (a)(a)if(swiper) {
+    <link rel="stylesheet" href="css/.min.css">} -->
+
+<title>Some product</title>
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/product.min.css">
+</head>
+
+<body>
+	<main class="main">
+		<div class="main__body">
+			<header class="header">
+				<a class="back-ref" href='index.html'>
+					<svg width="53" height="33" viewBox="0 0 53 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M53 16.5C53 16.0138 52.8006 15.5476 52.4456 15.2038C52.0907 14.8601 51.6092 14.6669 51.1073 14.6669H6.46519L18.3781 3.13321C18.554 2.96278 18.6936 2.76045 18.7889 2.53777C18.8841 2.31509 18.9331 2.07642 18.9331 1.83539C18.9331 1.59436 18.8841 1.3557 18.7889 1.13302C18.6936 0.910338 18.554 0.708005 18.3781 0.537573C18.2021 0.367141 17.9932 0.231948 17.7632 0.139711C17.5333 0.0474739 17.2869 0 17.038 0C16.7891 0 16.5427 0.0474739 16.3128 0.139711C16.0828 0.231948 15.8739 0.367141 15.698 0.537573L0.556062 15.2022C0.379799 15.3725 0.239952 15.5747 0.144534 15.7974C0.0491157 16.0201 0 16.2589 0 16.5C0 16.7411 0.0491157 16.9799 0.144534 17.2026C0.239952 17.4253 0.379799 17.6275 0.556062 17.7978L15.698 32.4624C15.8739 32.6329 16.0828 32.7681 16.3128 32.8603C16.5427 32.9525 16.7891 33 17.038 33C17.2869 33 17.5333 32.9525 17.7632 32.8603C17.9932 32.7681 18.2021 32.6329 18.3781 32.4624C18.554 32.292 18.6936 32.0897 18.7889 31.867C18.8841 31.6443 18.9331 31.4056 18.9331 31.1646C18.9331 30.9236 18.8841 30.6849 18.7889 30.4622C18.6936 30.2396 18.554 30.0372 18.3781 29.8668L6.46519 18.3331H51.1073C51.6092 18.3331 52.0907 18.14 52.4456 17.7962C52.8006 17.4524 53 16.9862 53 16.5Z"
+							fill="black" />
+					</svg>
+					<span>Back to menu</span>
+				</a>
+				<div class='cart toggle-sidebar' data-open-sidebar='sidebar' aria-label='your cart'>
+					<div class='cart__body'>
+						<button type="button" aria-label='show your cart' class="cart__bell">
+							<img src="img/bell.svg" alt=''>
+						</button>
+						<button class='cart__order-status' aria-label='order status' type='button'>
+							<span class="cart__text">ORDER STATus</span>
+							<span class="cart__product-counter active">1</span>
+						</button>
+					</div>
+				</div>
+			</header>
+			<section class='product-info'>
+				<div class='product-info__body'>
+					<div class="product-info__preview">
+<picture><source srcset="img/productPreview.avif" type="image/avif"><source srcset="img/productPreview.webp" type="image/webp"><img src="img/productPreview.png" alt='Cinnamon and Cocoa' width=781 height=724></picture>
+					</div>
+					<div class="product-info__content">
+						<h1 tabindex='0' class='product-info__title'>Cinnamon and Cocoa</h1>
+						<p class="product-info__about">
+							A single espresso shot poured into hot foamy milk, with the surface topped with mildly sweetened cocoa powder and drizzled with
+							scrumptious caramel
+							syrup.
+						</p>
+						<form class="product-info__buy-form buy-form" action='#'>
+							<fieldset class="buy-form__fieldset">
+								<legend class="buy-form__legend">Size</legend>
+
+								<input class="buy-form__input" value="short" type="radio" name="size" id="sizeShort">
+								<label aria-label="size Short" class="buy-form__label buy-form__label_with-icon" for="sizeShort">
+									<div class="buy-form__label-decor">
+										<svg width="37" height="41" viewBox="0 0 37 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M8.22222 41H28.7778C29.2724 41.0001 29.7505 40.8222 30.1243 40.4992C30.4981 40.1761 30.7425 39.7294 30.8128 39.2411L34.6711 12.3H37V8.2H34.1592L30.6154 1.13365C30.4452 0.792885 30.1831 0.506244 29.8584 0.305969C29.5338 0.105695 29.1595 -0.000267731 28.7778 5.08013e-07H8.22222C7.44317 5.08013e-07 6.73194 0.4387 6.3825 1.13365L2.84078 8.2H0V12.3H2.32894L6.18722 39.2411C6.25746 39.7294 6.5019 40.1761 6.8757 40.4992C7.2495 40.8222 7.72758 41.0001 8.22222 41ZM29.637 18.45H7.363L6.48117 12.3H30.5168L29.637 18.45ZM10.0044 36.9L9.12256 30.75H27.8754L26.9936 36.9H10.0044ZM9.49256 4.1H27.5074L29.563 8.2H7.437L9.49256 4.1Z"
+												fill="#DAC6B6" />
+										</svg>
+									</div>
+									<span>short</span>
+								</label>
+
+								<input class="buy-form__input" value="short" type="radio" name="size" id="sizeTall">
+								<label aria-label="size Tall" class="buy-form__label buy-form__label_with-icon" for="sizeTall">
+									<div class="buy-form__label-decor">
+										<svg width="44" height="49" viewBox="0 0 44 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M9.77778 49H34.2222C34.8104 49.0001 35.379 48.7876 35.8235 48.4014C36.268 48.0153 36.5587 47.4815 36.6422 46.8979L41.2304 14.7H44V9.8H40.6218L36.4076 1.35485C36.2051 0.947594 35.8934 0.605023 35.5073 0.365671C35.1212 0.126318 34.6762 -0.000319971 34.2222 6.07138e-07H9.77778C8.85133 6.07138e-07 8.00556 0.524301 7.59 1.35485L3.37822 9.8H0V14.7H2.76956L7.35778 46.8979C7.44131 47.4815 7.73199 48.0153 8.17651 48.4014C8.62103 48.7876 9.18955 49.0001 9.77778 49ZM35.244 22.05H8.756L7.70733 14.7H36.2902L35.244 22.05ZM11.8971 44.1L10.8484 36.75H33.1491L32.1004 44.1H11.8971ZM11.2884 4.9H32.7116L35.156 9.8H8.844L11.2884 4.9Z"
+												fill="#DAC6B6" />
+										</svg>
+
+									</div>
+									<span>tall</span>
+								</label>
+
+								<input class="buy-form__input" value="grande" type="radio" name="sizeGrande" id="sizeGrande">
+								<label class="buy-form__label buy-form__label_with-icon" for="sizeGrande">
+									<div class="buy-form__label-decor">
+										<svg width="51" height="57" viewBox="0 0 51 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M11.3333 57H39.6667C40.3485 57.0001 41.0074 56.7529 41.5227 56.3037C42.0379 55.8545 42.3748 55.2336 42.4717 54.5547L47.7898 17.1H51V11.4H47.0843L42.1997 1.57605C41.965 1.1023 41.6037 0.703802 41.1562 0.425372C40.7087 0.146942 40.1928 -0.000372212 39.6667 7.06263e-07H11.3333C10.2595 7.06263e-07 9.27917 0.609901 8.7975 1.57605L3.91567 11.4H0V17.1H3.21017L8.52833 54.5547C8.62515 55.2336 8.96208 55.8545 9.47732 56.3037C9.99255 56.7529 10.6515 57.0001 11.3333 57ZM40.851 25.65H10.149L8.9335 17.1H42.0637L40.851 25.65ZM13.7898 51.3L12.5743 42.75H38.4228L37.2073 51.3H13.7898ZM13.0843 5.7H37.9157L40.749 11.4H10.251L13.0843 5.7Z"
+												fill="#DAC6B6" />
+										</svg>
+									</div>
+									<span>grande</span>
+								</label>
+
+								<input class="buy-form__input" value="venti" type="radio" name="sizeVenti" id="sizeVenti">
+								<label class="buy-form__label buy-form__label_with-icon" for="sizeVenti">
+									<div class="buy-form__label-decor">
+										<svg width="58" height="65" viewBox="0 0 58 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M12.8889 65H45.1111C45.8865 65.0001 46.6359 64.7182 47.2219 64.206C47.8078 63.6938 48.191 62.9856 48.3011 62.2115L54.3492 19.5H58V13H53.5469L47.9918 1.79725C47.725 1.25701 47.314 0.802582 46.8051 0.485074C46.2962 0.167565 45.7095 -0.000424452 45.1111 8.05387e-07H12.8889C11.6677 8.05387e-07 10.5528 0.695501 10.005 1.79725L4.45311 13H0V19.5H3.65078L9.69889 62.2115C9.809 62.9856 10.1922 63.6938 10.7781 64.206C11.3641 64.7182 12.1135 65.0001 12.8889 65ZM46.458 29.25H11.542L10.1597 19.5H47.8371L46.458 29.25ZM15.6826 58.5L14.3002 48.75H43.6966L42.3142 58.5H15.6826ZM14.8802 6.5H43.1198L46.342 13H11.658L14.8802 6.5Z"
+												fill="#DAC6B6" />
+										</svg>
+									</div>
+									<span>venti</span>
+								</label>
+							</fieldset>
+							<fieldset class="buy-form__fieldset">
+								<legend class="buy-form__legend">Extra</legend>
+
+								<input class="buy-form__input" value="sugar" type="radio" name="extra" id="extraSugar">
+								<label aria-label="extraSugar" class="buy-form__label" for="extraSugar">
+									sugar
+								</label>
+
+								<input class="buy-form__input" value="milk" type="radio" name="extra" id="extraMilk">
+								<label aria-label="extraMilk" class="buy-form__label" for="extraMilk">
+									milk
+								</label>
+							</fieldset>
+							<fieldset class="buy-form__fieldset">
+								<legend class="buy-form__legend">milk type</legend>
+
+								<input class="buy-form__input" value="oat" type="radio" name="milkType" id="milkOat">
+								<label aria-label="milkOat" class="buy-form__label" for="milkOat">
+									OAT MILK
+								</label>
+
+								<input class="buy-form__input" value="soy" type="radio" name="milkType" id="milkSoy">
+								<label aria-label="milkSoy" class="buy-form__label" for="milkSoy">
+									SOY MILK
+								</label>
+
+								<input class="buy-form__input" value="almond" type="radio" name="milkType" id="milkAlmond">
+								<label aria-label="milkAlmond" class="buy-form__label" for="milkAlmond">
+									ALMOND MILK
+								</label>
+							</fieldset>
+
+							<div class="buy-form__other">
+								<span class="product__price buy-form__price" id="price">99</span>
+								<div class="buy-form__product-counter-wrapper">
+									<button class='buy-form__decrease' aria-label='decrease' id="decreaser" type='button'>
+										<svg width="18" height="2" viewBox="0 0 18 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M17 1H1" stroke="#DAC6B6" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" />
+										</svg>
+									</button>
+
+									<input aria-label="current count of coffe..." class="buy-form__product-counter" type="number" name="productCounter" id="productCounter" min="1" step="1" value="1">
+
+									<button class='buy-form__increase' aria-label='increase' id="increaser" type='button'>
+										<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M15 7H9V1C9 0.734784 8.89464 0.48043 8.70711 0.292893C8.51957 0.105357 8.26522 0 8 0C7.73478 0 7.48043 0.105357 7.29289 0.292893C7.10536 0.48043 7 0.734784 7 1V7H1C0.734784 7 0.48043 7.10536 0.292893 7.29289C0.105357 7.48043 0 7.73478 0 8C0 8.26522 0.105357 8.51957 0.292893 8.70711C0.48043 8.89464 0.734784 9 1 9H7V15C7 15.2652 7.10536 15.5196 7.29289 15.7071C7.48043 15.8946 7.73478 16 8 16C8.26522 16 8.51957 15.8946 8.70711 15.7071C8.89464 15.5196 9 15.2652 9 15V9H15C15.2652 9 15.5196 8.89464 15.7071 8.70711C15.8946 8.51957 16 8.26522 16 8C16 7.73478 15.8946 7.48043 15.7071 7.29289C15.5196 7.10536 15.2652 7 15 7Z"
+												fill="#DAC6B6" />
+										</svg>
+									</button>
+								</div>
+							</div>
+
+							<button class="buy-form__submit" type='submit'>PLACE order</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+
+	<section id="searchModal" class='modal-window'>
+	<div class="modal-window__body">
+		<div class="modal-window__content">
+			<form class="searchbar">
+				<input class="searchbar__input" type='text' placeholder='Browse your favourite coffee here..' required>
+				<button aria-label="search" class="searchbar__submit" type='submit'>
+					<img src="img/searchLoupe.svg" alt="search">
+				</button>
+			</form>
+		</div>
+	</div>
+</section>
+
+<aside id="sidebar" class="sidebar">
+	<div class="sidebar__body">
+		<div class="sidebar__header">
+			<span class="sidebar__status">Order Status</span>
+		</div>
+		<div class="sidebar__statuses">
+			<section class="sidebar__status status">
+				<div class="status__metadata">
+					<span class="status__title">Ordered</span>
+					<span id="orderedTime" class="status__time">JUST Now</span>
+				</div>
+				<div class="order-label">
+					<div class="order-label__coffe-preview">
+<picture><source srcset="img/orders/order1preview.avif" type="image/avif"><source srcset="img/orders/order1preview.webp" type="image/webp"><img src="img/orders/order1preview.png" loading='lazy' alt='Cinnamon and Cocoa' width=81 height=81></picture>
+					</div>
+					<div class="order-label__title">Cinnamon and Cocoa</div>
+					<span class="order-label__count cart__product-counter active">2</span>
+				</div>
+			</section>
+			<section class="sidebar__status status">
+				<div class="status__metadata">
+					<span class="status__title">Preparing</span>
+					<span id="preparingTime" class="status__time">12 MINS AGO</span>
+				</div>
+				<div class="order-label">
+					<div class="order-label__coffe-preview">
+<picture><source srcset="img/orders/order2preview.avif" type="image/avif"><source srcset="img/orders/order2preview.webp" type="image/webp"><img src="img/orders/order2preview.png" loading='lazy' alt='Drizzled with caramel' width=80 height=80></picture>
+					</div>
+					<div class="order-label__title">Drizzled with caramel</div>
+					<span class="order-label__count cart__product-counter active">1</span>
+				</div>
+				<div class="order-label">
+					<div class="order-label__coffe-preview">
+<picture><source srcset="img/orders/order3preview.avif" type="image/avif"><source srcset="img/orders/order3preview.webp" type="image/webp"><img src="img/orders/order3preview.png" loading='lazy' alt='Thai green ' width=80 height=80></picture>
+					</div>
+					<div class="order-label__title">Thai green</div>
+					<span class="order-label__count cart__product-counter active">1</span>
+				</div>
+			</section>
+			<section class="sidebar__status status unactive">
+				<div class="status__metadata">
+					<span class="status__title">Finishing</span>
+				</div>
+			</section>
+			<section class="sidebar__status status unactive">
+				<div class="status__metadata">
+					<span class="status__title">Served</span>
+				</div>
+				<!-- If there is at least one order, add for this status class active. -->
+			</section>
+		</div>
+	</div>
+	<div class="sidebar__footer">
+		<div class="sidebar__price-calc-column price-calc-column">
+			<div class="price-calc-column__element">
+				<span class="price-calc-column__text">Subtotal</span>
+				<span class="price-calc-column__price">₹456.90</span>
+			</div>
+			<div class="price-calc-column__element">
+				<span class="price-calc-column__text">Discount -10%</span>
+				<span class="price-calc-column__price">₹45.69</span>
+			</div>
+			<div class="price-calc-column__element price-calc-column__finally">
+				<span class="price-calc-column__text">Total</span>
+				<span class="price-calc-column__price">₹411.21</span>
+			</div>
+		</div>
+		<div class="sidebar__close-row">
+			<button class='sidebar__close-footer toggle-sidebar' data-open-sidebar='sidebar' aria-label='close sidebar' type='button'>
+				<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="32" cy="32" r="32" fill="#CD4126" fill-opacity="0.8" />
+					<path d="M27 21L38 32L27 43" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</button>
+			<div class="sidebar__close-label">
+				<img src="img/threeDots.svg" loading='lazy' alt='' width=32 height=6>
+				<span>SLIDE TO CLOSE TABle</span>
+				<img src="img/threeDots.svg" loading='lazy' alt='' width=32 height=6>
+			</div>
+			<div class="sidebar__close-decor">
+				<img src="img/closeSidebarDecor.svg" loading='lazy' alt='' width=59 height=59>
+			</div>
+		</div>
+	</div>
+</aside>
+
+<div class="sidebar-swipe-wrapper"></div>
+</body>
+
+<script type="module" src="scripts/script.js"></script>
+
+</html>
+
+<!-- 
+  Made in Russia, with ❤, by Ivan Ulyanov. 
+-->

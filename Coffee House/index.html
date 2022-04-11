@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- maximum-scale=1.0, user-scalable=0 does not allow content to be scaled on Android. -->
+<!-- Disables forced link for phone number on iOS -->
+<meta name="format-detection" content="telephone=no">
+
+<meta name="description" content="Coffe house desc">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="./img/favicon.svg">
+<link rel="mask-icon" href="./img/favicon.svg" color="#000000">
+<!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+<!-- <link rel="manifest" href="manifest.json"> -->
+
+<!-- <link rel="preload" href="fonts/YourMainFont.woff2" as="font" crossorigin> -->
+
+<!-- SEO
+    <meta name="keywords" content="keyword1,">
+    <meta name="robots" content="none,noindex,nofollow,noimageindex,noarchive,nosnippet">
+    <meta name="Author" content="Author">
+    <meta name="Copyright" content="Copyright">
+    <meta name="Address" content="Address"> 
+    <! - Redirect (reload) the page. Delay in seconds; url=Site / page address ->
+    <meta http-equiv="refresh" content="seconds; url = URL">
+
+    Facebook
+    <! - site localization, for the Russian-language site ru_RU ->
+    <meta property="og:locale" content="ru_RU">
+    <! - content type, default is article ->
+    <meta property="og:type" content="article">
+    <! - the title of the page that will be displayed in the post of the social network ->
+    <meta property="og:title" content="META tags">
+    <! - page description ->
+    <meta property="og:description" content="Description of the page about META tags">
+    <! - link to the image that will be published in the post ->
+    <meta property="og:image" content="path">
+    <! - link to the current page ->
+    <meta property="og: url" content="path">
+    <! - site name ->
+    <meta property="og:site_name" content="Freelancer for life">
+
+    Twitter
+    <! - Map type, default is summary ->
+    <meta name="twitter: card" content="summary">
+    <! - Author name / login ->
+    <meta name="twitter: site" content="Ivan">
+    <! - Page title ->
+    <meta name="twitter: title" content="META tags">
+    <! - Page description ->
+    <meta name="twitter: description" content="about META tags">
+    <! - Link to image ->
+    <meta name="twitter: image" content="path">
+  -->
+
+
+<!--? Use this if you want set multiple files. -->
+<!-- (a)(a)if(swiper) {
+    <link rel="stylesheet" href="css/.min.css">} -->
+
+<title>Coffe House</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+	<h1 hidden>Welcome to the hidden heading!</h1>
+	<main class="main">
+		<div class="main__body">
+			<section class='main__menu menu-slider'>
+				<div class='menu-slider__body'>
+					<button type="button" aria-label="previous element" class='menu-slider__prev'>
+						<svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M3 15L15 3L27 15" stroke="black" stroke-opacity="0.4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</button>
+					<div class='swiper menu-slider__slider'>
+						<div class='swiper-wrapper'>
+							<button aria-label="Cappuccino" type="button" class='swiper-slide menu-slider__element menu-element'>
+	<div class="menu-element__image">
+		<img src="img/menu-el-icon.svg" loading='lazy' alt='Cappuccino'>
+	</div>
+	<span class="menu-element__name">Cappuccino</span>
+</button>
+							<button aria-label="Latte" type="button" class='swiper-slide menu-slider__element menu-element'>
+	<div class="menu-element__image">
+		<img src="img/menu-el-icon.svg" loading='lazy' alt='Cappuccino'>
+	</div>
+	<span class="menu-element__name">Latte</span>
+</button>
+							<button aria-label="Americano" type="button" class='swiper-slide menu-slider__element menu-element'>
+	<div class="menu-element__image">
+		<img src="img/menu-el-icon.svg" loading='lazy' alt='Cappuccino'>
+	</div>
+	<span class="menu-element__name">Americano</span>
+</button>
+							<button aria-label="Expresso" type="button" class='swiper-slide menu-slider__element menu-element'>
+	<div class="menu-element__image">
+		<img src="img/menu-el-icon.svg" loading='lazy' alt='Cappuccino'>
+	</div>
+	<span class="menu-element__name">Expresso</span>
+</button>
+							<button aria-label="Flat White" type="button" class='swiper-slide menu-slider__element menu-element'>
+	<div class="menu-element__image">
+		<img src="img/menu-el-icon.svg" loading='lazy' alt='Cappuccino'>
+	</div>
+	<span class="menu-element__name">Flat White</span>
+</button>
+							<button aria-label="Some else" type="button" class='swiper-slide menu-slider__element menu-element'>
+	<div class="menu-element__image">
+		<img src="img/menu-el-icon.svg" loading='lazy' alt='Cappuccino'>
+	</div>
+	<span class="menu-element__name">Some else</span>
+</button>
+						</div>
+					</div>
+					<button type="button" aria-label="previous element" class='menu-slider__next'>
+						<svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M27 3L15 15L3 3" stroke="black" stroke-opacity="0.4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</button>
+				</div>
+			</section>
+			<section class='main__top-menu top-menu'>
+				<div class='top-menu__body'>
+					<form class="top-menu__searchbar searchbar">
+						<input class="searchbar__input" type='text' placeholder='Browse your favourite coffee here..' required>
+						<button class="searchbar__submit" type='submit'>
+							<img src="img/searchLoupe.svg" alt="search">
+							<div class="content"></div>
+						</button>
+					</form>
+					<button data-modal-link="searchModal" class='top-menu__search-btn' aria-label='search coffe by name' type='button'>
+						<img src="img/searchLoupe.svg" alt="search">
+					</button>
+					<div class='cart toggle-sidebar' data-open-sidebar='sidebar' aria-label='your cart'>
+						<div class='cart__body'>
+							<button type="button" aria-label='show your cart' class="cart__bell">
+								<img src="img/bell.svg" alt=''>
+							</button>
+							<button class='cart__order-status' aria-label='order status' type='button'>
+								<span class="cart__text">ORDER STATus</span>
+								<span class="cart__product-counter active">1</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class='main__products products'>
+				<div class='products__body'>
+					<div class='product'>
+	<div class='product__body'>
+		<a href="product.html" class="product__image">
+<picture><source srcset="img/products/coffe1.avif" type="image/avif"><source srcset="img/products/coffe1.webp" type="image/webp"><img src="img/products/coffe1.jpg" loading='lazy' alt='Cinnamon and Cocoa' width=309 height=309></picture>
+		</a>
+		<h2 class='product__title'>Cinnamon and Cocoa</h2>
+		<footer class="product__footer">
+			<button type="button" class="product__actions">
+				<span class="product__price">99</span>
+				<div class="product__add-btn">
+					<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M2.2109 9.8007H15.2147C15.9325 9.8007 16.515 9.21813 16.515 8.50033C16.515 7.78252 15.9325 7.19995 15.2147 7.19995H2.2109C1.49309 7.19995 0.910522 7.78252 0.910522 8.50033C0.910522 9.21813 1.49309 9.8007 2.2109 9.8007Z"
+							fill="#1C161E" />
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M10.0135 15.0028V1.99905C10.0135 1.28124 9.43096 0.698669 8.71316 0.698669C7.99535 0.698669 7.41278 1.28124 7.41278 1.99905V15.0028C7.41278 15.7206 7.99535 16.3032 8.71316 16.3032C9.43096 16.3032 10.0135 15.7206 10.0135 15.0028Z"
+							fill="#1C161E" />
+					</svg>
+				</div>
+			</button>
+		</footer>
+	</div>
+</div>
+					<div class='product'>
+	<div class='product__body'>
+		<a href="product.html" class="product__image">
+<picture><source srcset="img/products/coffe2.avif" type="image/avif"><source srcset="img/products/coffe2.webp" type="image/webp"><img src="img/products/coffe2.jpg" loading='lazy' alt='Cinnamon and Cocoa' width=309 height=309></picture>
+		</a>
+		<h2 class='product__title'>Drizzled with Caramel</h2>
+		<footer class="product__footer">
+			<button type="button" class="product__actions">
+				<span class="product__price">99</span>
+				<div class="product__add-btn">
+					<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M2.2109 9.8007H15.2147C15.9325 9.8007 16.515 9.21813 16.515 8.50033C16.515 7.78252 15.9325 7.19995 15.2147 7.19995H2.2109C1.49309 7.19995 0.910522 7.78252 0.910522 8.50033C0.910522 9.21813 1.49309 9.8007 2.2109 9.8007Z"
+							fill="#1C161E" />
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M10.0135 15.0028V1.99905C10.0135 1.28124 9.43096 0.698669 8.71316 0.698669C7.99535 0.698669 7.41278 1.28124 7.41278 1.99905V15.0028C7.41278 15.7206 7.99535 16.3032 8.71316 16.3032C9.43096 16.3032 10.0135 15.7206 10.0135 15.0028Z"
+							fill="#1C161E" />
+					</svg>
+				</div>
+			</button>
+		</footer>
+	</div>
+</div>
+					<div class='product'>
+	<div class='product__body'>
+		<a href="product.html" class="product__image">
+<picture><source srcset="img/products/coffe2.avif" type="image/avif"><source srcset="img/products/coffe2.webp" type="image/webp"><img src="img/products/coffe2.jpg" loading='lazy' alt='Cinnamon and Cocoa' width=309 height=309></picture>
+		</a>
+		<h2 class='product__title'>lorem ipsum ipsum lorem</h2>
+		<footer class="product__footer">
+			<button type="button" class="product__actions">
+				<span class="product__price">99</span>
+				<div class="product__add-btn">
+					<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M2.2109 9.8007H15.2147C15.9325 9.8007 16.515 9.21813 16.515 8.50033C16.515 7.78252 15.9325 7.19995 15.2147 7.19995H2.2109C1.49309 7.19995 0.910522 7.78252 0.910522 8.50033C0.910522 9.21813 1.49309 9.8007 2.2109 9.8007Z"
+							fill="#1C161E" />
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M10.0135 15.0028V1.99905C10.0135 1.28124 9.43096 0.698669 8.71316 0.698669C7.99535 0.698669 7.41278 1.28124 7.41278 1.99905V15.0028C7.41278 15.7206 7.99535 16.3032 8.71316 16.3032C9.43096 16.3032 10.0135 15.7206 10.0135 15.0028Z"
+							fill="#1C161E" />
+					</svg>
+				</div>
+			</button>
+		</footer>
+	</div>
+</div>
+					<div class='product'>
+	<div class='product__body'>
+		<a href="product.html" class="product__image">
+<picture><source srcset="img/products/coffe4.avif" type="image/avif"><source srcset="img/products/coffe4.webp" type="image/webp"><img src="img/products/coffe4.jpg" loading='lazy' alt='Cinnamon and Cocoa' width=309 height=309></picture>
+		</a>
+		<h2 class='product__title'>lorem ipsum ipsum lorem</h2>
+		<footer class="product__footer">
+			<button type="button" class="product__actions">
+				<span class="product__price">99</span>
+				<div class="product__add-btn">
+					<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M2.2109 9.8007H15.2147C15.9325 9.8007 16.515 9.21813 16.515 8.50033C16.515 7.78252 15.9325 7.19995 15.2147 7.19995H2.2109C1.49309 7.19995 0.910522 7.78252 0.910522 8.50033C0.910522 9.21813 1.49309 9.8007 2.2109 9.8007Z"
+							fill="#1C161E" />
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M10.0135 15.0028V1.99905C10.0135 1.28124 9.43096 0.698669 8.71316 0.698669C7.99535 0.698669 7.41278 1.28124 7.41278 1.99905V15.0028C7.41278 15.7206 7.99535 16.3032 8.71316 16.3032C9.43096 16.3032 10.0135 15.7206 10.0135 15.0028Z"
+							fill="#1C161E" />
+					</svg>
+				</div>
+			</button>
+		</footer>
+	</div>
+</div>
+					<div class='product'>
+	<div class='product__body'>
+		<a href="product.html" class="product__image">
+<picture><source srcset="img/products/coffe5.avif" type="image/avif"><source srcset="img/products/coffe5.webp" type="image/webp"><img src="img/products/coffe5.jpg" loading='lazy' alt='Cinnamon and Cocoa' width=309 height=309></picture>
+		</a>
+		<h2 class='product__title'>lorem ipsum ipsum lorem</h2>
+		<footer class="product__footer">
+			<button type="button" class="product__actions">
+				<span class="product__price">99</span>
+				<div class="product__add-btn">
+					<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M2.2109 9.8007H15.2147C15.9325 9.8007 16.515 9.21813 16.515 8.50033C16.515 7.78252 15.9325 7.19995 15.2147 7.19995H2.2109C1.49309 7.19995 0.910522 7.78252 0.910522 8.50033C0.910522 9.21813 1.49309 9.8007 2.2109 9.8007Z"
+							fill="#1C161E" />
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M10.0135 15.0028V1.99905C10.0135 1.28124 9.43096 0.698669 8.71316 0.698669C7.99535 0.698669 7.41278 1.28124 7.41278 1.99905V15.0028C7.41278 15.7206 7.99535 16.3032 8.71316 16.3032C9.43096 16.3032 10.0135 15.7206 10.0135 15.0028Z"
+							fill="#1C161E" />
+					</svg>
+				</div>
+			</button>
+		</footer>
+	</div>
+</div>
+					<div class='product'>
+	<div class='product__body'>
+		<a href="product.html" class="product__image">
+<picture><source srcset="img/products/coffe6.avif" type="image/avif"><source srcset="img/products/coffe6.webp" type="image/webp"><img src="img/products/coffe6.jpg" loading='lazy' alt='Cinnamon and Cocoa' width=309 height=309></picture>
+		</a>
+		<h2 class='product__title'>lorem ipsum ipsum lorem</h2>
+		<footer class="product__footer">
+			<button type="button" class="product__actions">
+				<span class="product__price">99</span>
+				<div class="product__add-btn">
+					<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M2.2109 9.8007H15.2147C15.9325 9.8007 16.515 9.21813 16.515 8.50033C16.515 7.78252 15.9325 7.19995 15.2147 7.19995H2.2109C1.49309 7.19995 0.910522 7.78252 0.910522 8.50033C0.910522 9.21813 1.49309 9.8007 2.2109 9.8007Z"
+							fill="#1C161E" />
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M10.0135 15.0028V1.99905C10.0135 1.28124 9.43096 0.698669 8.71316 0.698669C7.99535 0.698669 7.41278 1.28124 7.41278 1.99905V15.0028C7.41278 15.7206 7.99535 16.3032 8.71316 16.3032C9.43096 16.3032 10.0135 15.7206 10.0135 15.0028Z"
+							fill="#1C161E" />
+					</svg>
+				</div>
+			</button>
+		</footer>
+	</div>
+</div>
+				</div>
+			</section>
+		</div>
+	</main>
+	<section id="searchModal" class='modal-window'>
+	<div class="modal-window__body">
+		<div class="modal-window__content">
+			<form class="searchbar">
+				<input class="searchbar__input" type='text' placeholder='Browse your favourite coffee here..' required>
+				<button aria-label="search" class="searchbar__submit" type='submit'>
+					<img src="img/searchLoupe.svg" alt="search">
+				</button>
+			</form>
+		</div>
+	</div>
+</section>
+
+<aside id="sidebar" class="sidebar">
+	<div class="sidebar__body">
+		<div class="sidebar__header">
+			<span class="sidebar__status">Order Status</span>
+		</div>
+		<div class="sidebar__statuses">
+			<section class="sidebar__status status">
+				<div class="status__metadata">
+					<span class="status__title">Ordered</span>
+					<span id="orderedTime" class="status__time">JUST Now</span>
+				</div>
+				<div class="order-label">
+					<div class="order-label__coffe-preview">
+<picture><source srcset="img/orders/order1preview.avif" type="image/avif"><source srcset="img/orders/order1preview.webp" type="image/webp"><img src="img/orders/order1preview.png" loading='lazy' alt='Cinnamon and Cocoa' width=81 height=81></picture>
+					</div>
+					<div class="order-label__title">Cinnamon and Cocoa</div>
+					<span class="order-label__count cart__product-counter active">2</span>
+				</div>
+			</section>
+			<section class="sidebar__status status">
+				<div class="status__metadata">
+					<span class="status__title">Preparing</span>
+					<span id="preparingTime" class="status__time">12 MINS AGO</span>
+				</div>
+				<div class="order-label">
+					<div class="order-label__coffe-preview">
+<picture><source srcset="img/orders/order2preview.avif" type="image/avif"><source srcset="img/orders/order2preview.webp" type="image/webp"><img src="img/orders/order2preview.png" loading='lazy' alt='Drizzled with caramel' width=80 height=80></picture>
+					</div>
+					<div class="order-label__title">Drizzled with caramel</div>
+					<span class="order-label__count cart__product-counter active">1</span>
+				</div>
+				<div class="order-label">
+					<div class="order-label__coffe-preview">
+<picture><source srcset="img/orders/order3preview.avif" type="image/avif"><source srcset="img/orders/order3preview.webp" type="image/webp"><img src="img/orders/order3preview.png" loading='lazy' alt='Thai green ' width=80 height=80></picture>
+					</div>
+					<div class="order-label__title">Thai green</div>
+					<span class="order-label__count cart__product-counter active">1</span>
+				</div>
+			</section>
+			<section class="sidebar__status status unactive">
+				<div class="status__metadata">
+					<span class="status__title">Finishing</span>
+				</div>
+			</section>
+			<section class="sidebar__status status unactive">
+				<div class="status__metadata">
+					<span class="status__title">Served</span>
+				</div>
+				<!-- If there is at least one order, add for this status class active. -->
+			</section>
+		</div>
+	</div>
+	<div class="sidebar__footer">
+		<div class="sidebar__price-calc-column price-calc-column">
+			<div class="price-calc-column__element">
+				<span class="price-calc-column__text">Subtotal</span>
+				<span class="price-calc-column__price">₹456.90</span>
+			</div>
+			<div class="price-calc-column__element">
+				<span class="price-calc-column__text">Discount -10%</span>
+				<span class="price-calc-column__price">₹45.69</span>
+			</div>
+			<div class="price-calc-column__element price-calc-column__finally">
+				<span class="price-calc-column__text">Total</span>
+				<span class="price-calc-column__price">₹411.21</span>
+			</div>
+		</div>
+		<div class="sidebar__close-row">
+			<button class='sidebar__close-footer toggle-sidebar' data-open-sidebar='sidebar' aria-label='close sidebar' type='button'>
+				<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="32" cy="32" r="32" fill="#CD4126" fill-opacity="0.8" />
+					<path d="M27 21L38 32L27 43" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</button>
+			<div class="sidebar__close-label">
+				<img src="img/threeDots.svg" loading='lazy' alt='' width=32 height=6>
+				<span>SLIDE TO CLOSE TABle</span>
+				<img src="img/threeDots.svg" loading='lazy' alt='' width=32 height=6>
+			</div>
+			<div class="sidebar__close-decor">
+				<img src="img/closeSidebarDecor.svg" loading='lazy' alt='' width=59 height=59>
+			</div>
+		</div>
+	</div>
+</aside>
+
+<div class="sidebar-swipe-wrapper"></div>
+</body>
+
+
+<script type="module" src="scripts/script.js"></script>
+
+<!-- Swiper -->
+<link rel="stylesheet" href="css/swiper-bundle.min.css">
+<script defer src="scripts/swiper-bundle.min.js"></script>
+<script type="module" src="scripts/sliders.js"></script>
+
+
+</html>
+
+<!-- 
+  Made in Russia, with ❤, by Ivan Ulyanov. 
+-->

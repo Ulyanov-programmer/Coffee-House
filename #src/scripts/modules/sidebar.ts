@@ -18,17 +18,16 @@ export default class SidebarMenu {
 	 * This error will be printed to the console if some input argument are null or white spaces.
 	 */
 	constructor(selectorOfSidebars: string, selectorOfSidebarButtons: string) {
-		if (isNullOrWhiteSpaces(selectorOfSidebars, selectorOfSidebarButtons)) {
+		if (isNullOrWhiteSpaces(selectorOfSidebars, selectorOfSidebarButtons))
 			throw '[SIDEBAR] Some selector is null or white spaces!'
-		}
 
 		this.sidebars = document.querySelectorAll(selectorOfSidebars);
 		this.sidebarButtons = document.querySelectorAll(selectorOfSidebarButtons);
 
-		for (const sidebarBtn of this.sidebarButtons) {
-			sidebarBtn.addEventListener('click', () => {
+		for (let sidebarBtn of this.sidebarButtons) {
+			sidebarBtn.addEventListener('click', () =>
 				this.toggleSidebar(sidebarBtn)
-			})
+			)
 		}
 	}
 
@@ -37,6 +36,9 @@ export default class SidebarMenu {
 
 		eventButton.classList.toggle(SidebarMenu.buttonsActiveClass);
 		parentSidebar.classList.toggle(SidebarMenu.sidebarsActiveClass);
+
+		let mainContent = document.querySelector('main');
+		mainContent.classList.toggle('paranja')
 	}
 }
 

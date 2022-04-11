@@ -1,26 +1,31 @@
 .searchbar {
-  flex-set: row nowrap
-  background: #fff
+	flex-set row nowrap;
+	justify-content space-between;
+	background #DADADA;
+	border-radius 30px;
+	padding 5px 20px;
 
-  &__input {
-    padding: 10px
-    transition: all 0.3s ease
+	&__input {
+		padding 10px;
+		font-family inherit;
+		background #DADADA;
+		font-size adapt-fsize(25, 20);
+		transition all 0.3s ease;
+		flex-grow 1;
 
-    &:hover, &:focus {
-      background: #d8d5d5
-    }
-  }
+		&:focus {
+			&::placeholder {
+				opacity 0;
+			}
+		}
+	}
 
-  &__submit {
-    padding: 10px
-    transition: all 0.3s ease
+	&__submit {
+		padding 10px;
+		transition all 0.3s ease;
 
-    &:hover, &:focus {
-      background: #acabab
-    }
-
-    img {
-      block-size: 20px
-    }
-  }
+		img {
+			block-size 30px;
+		}
+	}
 }

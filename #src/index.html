@@ -3,36 +3,107 @@
 
 <head>
 	@@include('_headContent.htm', {
-	"title": "Main",
+	"title": "Coffe House",
 	})
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-	@@include('_header.htm', {})
-
+	<h1 hidden>Welcome to the hidden heading!</h1>
 	<main class="main">
 		<div class="main__body">
-			@@include('_demo.htm')
+			<section class='main__menu menu-slider'>
+				<div class='menu-slider__body'>
+					<button type="button" aria-label="previous element" class='menu-slider__prev'>
+						<svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M3 15L15 3L27 15" stroke="black" stroke-opacity="0.4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</button>
+					<div class='swiper menu-slider__slider'>
+						<div class='swiper-wrapper'>
+							@@include('_menuBtn.htm', {
+							'title': 'Cappuccino'
+							})
+							@@include('_menuBtn.htm', {
+							'title': 'Latte'
+							})
+							@@include('_menuBtn.htm', {
+							'title': 'Americano'
+							})
+							@@include('_menuBtn.htm', {
+							'title': 'Expresso'
+							})
+							@@include('_menuBtn.htm', {
+							'title': 'Flat White'
+							})
+							@@include('_menuBtn.htm', {
+							'title': 'Some else'
+							})
+						</div>
+					</div>
+					<button type="button" aria-label="previous element" class='menu-slider__next'>
+						<svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M27 3L15 15L3 3" stroke="black" stroke-opacity="0.4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</button>
+				</div>
+			</section>
+			<section class='main__top-menu top-menu'>
+				<div class='top-menu__body'>
+					<form class="top-menu__searchbar searchbar">
+						<input class="searchbar__input" type='text' placeholder='Browse your favourite coffee here..' required>
+						<button class="searchbar__submit" type='submit'>
+							<img src="img/searchLoupe.svg" alt="search">
+							<div class="content"></div>
+						</button>
+					</form>
+					<button data-modal-link="searchModal" class='top-menu__search-btn' aria-label='search coffe by name' type='button'>
+						<img src="img/searchLoupe.svg" alt="search">
+					</button>
+					<div class='cart toggle-sidebar' data-open-sidebar='sidebar' aria-label='your cart'>
+						<div class='cart__body'>
+							<button type="button" aria-label='show your cart' class="cart__bell">
+								<img src="img/bell.svg" alt=''>
+							</button>
+							<button class='cart__order-status' aria-label='order status' type='button'>
+								<span class="cart__text">ORDER STATus</span>
+								<span class="cart__product-counter active">1</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class='main__products products'>
+				<div class='products__body'>
+					@@include('_product.htm', {
+					"imgname": 'coffe1',
+					'title': 'Cinnamon and Cocoa'
+					})
+					@@include('_product.htm', {
+					"imgname": 'coffe2',
+					'title': 'Drizzled with Caramel'
+					})
+					@@include('_product.htm', {
+					"imgname": 'coffe2',
+					'title': 'lorem ipsum ipsum lorem'
+					})
+					@@include('_product.htm', {
+					"imgname": 'coffe4',
+					'title': 'lorem ipsum ipsum lorem'
+					})
+					@@include('_product.htm', {
+					"imgname": 'coffe5',
+					'title': 'lorem ipsum ipsum lorem'
+					})
+					@@include('_product.htm', {
+					"imgname": 'coffe6',
+					'title': 'lorem ipsum ipsum lorem'
+					})
+				</div>
+			</section>
 		</div>
 	</main>
-
-	@@include('_footer.htm', {})
-
-	<section id="modal1" class='modal-window'>
-		<div class="modal-window__body">
-			<div class="modal-window__content">
-				<button type='button' class="modal-closer">close me</button>
-
-				<form class="searchbar">
-					<input class="searchbar__input" type='text' placeholder='input' required>
-					<button aria-label="search" class="searchbar__submit" type='submit'>
-						<img src="img/demo/loupe.svg" alt="search">
-					</button>
-				</form>
-			</div>
-		</div>
-	</section>
+	@@include('_modals.htm', {})
 </body>
 
 

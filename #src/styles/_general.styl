@@ -45,27 +45,13 @@ html {
 	}
 }
 
-.adaptive-video {
-	display block;
-	position relative;
-	padding 0 0 100% 0;
-
-	video {
-		position absolute;
-		top 0;
-		left 0;
-		size(100%, 100%);
-		object-fit contain;
-	}
-}
-
 .modal-window {
 	position fixed;
 	z-index 15;
 	top 0;
 	left 0;
 	background #00000046;
-	block-size 100% 100%;
+	block-size 100%;
 	hide();
 	transition all 0.5s ease;
 
@@ -78,5 +64,8 @@ html {
 		height 100%;
 		align-items center;
 		justify-content center;
+	}
+	&__content {
+		min-width: 80vw
 	}
 }

@@ -27,7 +27,7 @@ const srcDemoFoldersAndFIles =
 
 const demoStyles = {
 	files: pathToProject + mainStyleFile,
-	from: "@import '_demoStyles'", to: '',
+	from: "@import '_demoStyles';", to: '',
 };
 const demoHtml = {
 	files: pathToProject + mainHtmlFile,
@@ -49,7 +49,7 @@ console.log('🎆🎆🎆 I wish You a successful job!');
 
 async function setModules() {
 	await includeModuleByQuestion(`Include Burger Menu? ${hint}`,
-		`${scriptModules}fsNavmenu.ts`, `${stylesModules}_fsNavmenu.styl`)
+		`${scriptModules}fsNavmenu.ts`, `${stylesModules}_fsNavmenu.styl;`)
 
 	await includeModuleByQuestion(`Include Filter? ${hint}`,
 		`${scriptModules}filter.ts`)
@@ -58,13 +58,13 @@ async function setModules() {
 		`${scriptModules}modalWindow.ts`)
 
 	await includeModuleByQuestion(`Include Spoilers? ${hint}`,
-		`${scriptModules}spoiler.ts`, `${stylesModules}_spoiler.styl`)
+		`${scriptModules}spoiler.ts`, `${stylesModules}_spoiler.styl;`)
 
 	await includeModuleByQuestion(`Include Sidebar? ${hint}`,
-		`${scriptModules}sidebar.ts`, `${stylesModules}_sidebar.styl`)
+		`${scriptModules}sidebar.ts`, `${stylesModules}_sidebar.styl;`)
 
 	await includeModuleByQuestion(`Include Submenu? ${hint}`,
-		`${scriptModules}submenu.ts`, `${stylesModules}_submenu.styl`)
+		`${scriptModules}submenu.ts`, `${stylesModules}_submenu.styl;`)
 
 	await includeModuleByQuestion(`Include Accordion? ${hint}`,
 		`${scriptModules}accord.ts`)
@@ -82,7 +82,7 @@ async function setModules() {
 		`${scriptModules}animateByScroll.ts`)
 
 	await includeModuleByQuestion(`Include Searchbar styles? ${hint}`,
-		``, `${stylesModules}_searchbar.styl`)
+		``, `${stylesModules}_searchbar.styl;`)
 }
 function deleteFontsGitkeep() {
 	try {

@@ -29,8 +29,11 @@ html,body
 html
   -webkit-tap-highlight-color: #00000000
 
-input::-ms-clear
-  display: none
+input
+	&::-ms-clear
+  	display: none
+	&:focus-visible
+		outline: none
 
 button
   cursor: pointer
