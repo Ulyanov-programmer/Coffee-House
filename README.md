@@ -17,4 +17,4 @@ New sidebar, used swipe-menu module.
 
 You can see this [this on GitHub Pages].<br>
 
-[this on GitHub Pages]: https://ulyanov-programmer.github.io/Kjolig_eComm/Kjølig_eComm/
+[this on GitHub Pages]: https://ulyanov-programmer.github.io/Coffee-House/Coffee%20House/
