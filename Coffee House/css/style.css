@@ -462,19 +462,27 @@ address {
 }
 
 .sidebar-swipe-wrapper {
-  z-index: 10;
+  z-index: 9;
   position: fixed;
   top: 0;
   right: 0;
-  width: 150px;
+  width: 5vw;
   height: 100vh;
   cursor: -webkit-grab;
   cursor: grab;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .sidebar-swipe-wrapper:active {
   cursor: -webkit-grabbing;
   cursor: grabbing;
+}
+
+.sidebar-swipe-wrapper.active {
+  width: 100vw;
 }
 
 .searchbar {
@@ -608,10 +616,6 @@ body {
   background: var(--bg);
 }
 
-body.scroll-block {
-  overflow: hidden;
-}
-
 body button {
   font-size: calc((100vw - 20rem)/(48 - 20) * (1 - 0.833333333333333) + 0.833333333333333rem);
   font-family: var(--main-font-family);
@@ -637,8 +641,9 @@ body button {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  gap: 30px;
+  gap: 10px 30px;
   padding: 40px;
+  padding-bottom: 20px;
 }
 
 .main__menu {
@@ -1014,7 +1019,7 @@ body button {
 }
 
 @media (min-width: 850px) {
-  body {
+  body.scroll-block {
     overflow: hidden;
   }
 
@@ -1024,7 +1029,7 @@ body button {
 
   .products {
     overflow: auto;
-    height: 72vh;
+    height: 75vh;
     padding: 20px;
     margin-left: -20px;
   }

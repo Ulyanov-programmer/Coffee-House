@@ -12,12 +12,10 @@ body {
 	font adapt-fsize($mainFontSize, $minFontSize) var(--main-font-family);
 	background var(--bg);
 
-	@media (min-width 850px) {
-		overflow hidden;
-	}
-
 	&.scroll-block {
-		overflow hidden;
+		@media (min-width 850px) {
+			overflow hidden;
+		}
 	}
 
 	button {
@@ -40,8 +38,9 @@ body {
 		grid-template-columns 160px auto;
 		grid-template-rows 90px auto;
 		align-items start;
-		gap 30px;
+		gap 10px 30px;
 		padding 40px;
+		padding-bottom: 20px;
 
 		@media (max-width 1040px) {
 			padding 20px;
@@ -199,7 +198,7 @@ body {
 .products {
 	@media (min-width 850px) {
 		overflow auto;
-		height 72vh;
+		height 75vh;
 		padding 20px;
 		margin-left -20px;
 	}
@@ -295,7 +294,7 @@ body {
 	&__price {
 		font-family OpenSans;
 		font-weight 600;
-		padding 0 25px;
+		padding: 0 25px;
 
 		&.dolls {
 			&:before {

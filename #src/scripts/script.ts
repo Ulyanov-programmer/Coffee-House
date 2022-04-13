@@ -32,10 +32,10 @@ SidebarMenu.buttonsActiveClass = 'active'
 import SwipeElement, { ChangePlane } from "./modules/swipeMenu.js";
 
 new SwipeElement({
-	touchAreaSelector: '.sidebar-swipe-wrapper',
+	touchStartAreaSelector: '.sidebar-swipe-wrapper',
 	swipableElementSelector: '#sidebar',
 	changePlane: ChangePlane.ToLeft,
-	swipeSensitivity: 0.1,
+	swipeSensitivity: 0.5,
 })
 
 

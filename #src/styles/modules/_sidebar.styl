@@ -211,15 +211,20 @@
 }
 
 .sidebar-swipe-wrapper {
-	z-index 10;
+	z-index 9;
 	position fixed;
 	top 0;
 	right 0;
-	width 150px;
+	width 5vw;
 	height 100vh;
 	cursor grab;
+	user-select none;
 
 	&:active {
 		cursor grabbing;
+	}
+
+	&.active {
+		width 100vw;
 	}
 }

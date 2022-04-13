@@ -39,6 +39,9 @@ export default class SidebarMenu {
 
 		let mainContent = document.querySelector('main');
 		mainContent.classList.toggle('paranja')
+
+		let swipeArea = document.querySelector('.sidebar-swipe-wrapper');
+		swipeArea.classList.toggle('active')
 	}
 }
 

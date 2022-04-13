@@ -197,6 +197,7 @@
 
 .buy-form__price {
   font-size: 60px;
+  padding: 0 25px 0 0;
 }
 
 .buy-form__product-counter-wrapper {
@@ -335,5 +336,13 @@
 
   .buy-form__legend {
     margin: 0 auto 10px auto;
+  }
+}
+
+@media (max-width: 850px) {
+  .buy-form__fieldset {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
