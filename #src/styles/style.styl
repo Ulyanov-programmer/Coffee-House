@@ -27,7 +27,7 @@ body {
 
 .main {
 	background var(--bg);
-	transition all 0.3s ease;
+	transition all .3s ease;
 
 	&.paranja {
 		filter brightness(80%);
@@ -40,7 +40,7 @@ body {
 		align-items start;
 		gap 10px 30px;
 		padding 40px;
-		padding-bottom: 20px;
+		padding-bottom 20px;
 
 		@media (max-width 1040px) {
 			padding 20px;
@@ -147,7 +147,7 @@ body {
 			border-radius 50%;
 			z-index -1;
 			block-size 10px;
-			transition all 0.3s ease;
+			transition all .3s ease;
 			content '';
 		}
 	}
@@ -236,8 +236,8 @@ body {
 		background #fff;
 		border 5px solid rgba(255, 255, 255, 0);
 		color var(--text-c);
-		box-shadow 0 0 30px rgba(0, 0, 0, 0.1);
-		transition all 0.3s ease;
+		box-shadow 0 0 30px rgba(0, 0, 0, .1);
+		transition all .3s ease;
 
 		&:hover, &:focus {
 			border-color #DAC6B6;
@@ -294,7 +294,7 @@ body {
 	&__price {
 		font-family OpenSans;
 		font-weight 600;
-		padding: 0 25px;
+		padding 0 25px;
 
 		&.dolls {
 			&:before {
@@ -316,7 +316,7 @@ body {
 		padding 15px;
 
 		path {
-			transition all 0.3s ease;
+			transition all .3s ease;
 		}
 	}
 }
@@ -326,14 +326,24 @@ body {
 	}
 
 	&__slider {
+		height 300px;
+		background red;
+		overflow-y scroll;
 		background #fff;
+		firstLevelElementsMargin 'bottom' 20;
 
 		@media (min-width $to-mobile-mod-width) {
 			height 500px;
 		}
 
 		@media (max-width $to-mobile-mod-width) {
+			flex-set row nowrap;
+			firstLevelElementsMargin 'bottom' 0;
+			firstLevelElementsMargin 'right' 20;
 			border-radius 20px;
+			height 200px;
+			overflow-y hidden;
+			overflow-x scroll;
 		}
 
 		@media (max-height 780px) and (min-width $to-mobile-mod-width) {
@@ -350,7 +360,7 @@ body {
 
 		&:hover, &:focus {
 			path {
-				stroke-opacity 0.8;
+				stroke-opacity .8;
 			}
 		}
 
@@ -363,7 +373,7 @@ body {
 		}
 
 		path {
-			transition all 0.2s ease;
+			transition all .2s ease;
 		}
 	}
 
@@ -384,6 +394,8 @@ body {
 .menu-element {
 	flex-set column nowrap;
 	min-height 140px;
+	height 140px;
+	width 100%;
 	justify-content center;
 	align-items center;
 	firstLevelElementsMargin 'bottom' 15;
@@ -392,7 +404,13 @@ body {
 	background #fff;
 	border-radius 20px;
 
-	&.swiper-slide-active, &:hover, &:focus {
+	@media (max-width $to-mobile-mod-width) {
+		min-height auto;
+		height auto;
+		min-width 150px;
+	}
+
+	&.active, &:hover, &:focus {
 		border-color #000;
 		background #DAC6B6;
 
@@ -406,7 +424,7 @@ body {
 	&__image {
 		height 0;
 		hide();
-		transition all 0.3s ease;
+		transition all .3s ease;
 	}
 
 	&__name {

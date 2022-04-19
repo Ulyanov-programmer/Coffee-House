@@ -19,27 +19,26 @@
 							<path d="M3 15L15 3L27 15" stroke="black" stroke-opacity="0.4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
 						</svg>
 					</button>
-					<div class='swiper menu-slider__slider'>
-						<div class='swiper-wrapper'>
-							@@include('_menuBtn.htm', {
-							'title': 'Cappuccino'
-							})
-							@@include('_menuBtn.htm', {
-							'title': 'Latte'
-							})
-							@@include('_menuBtn.htm', {
-							'title': 'Americano'
-							})
-							@@include('_menuBtn.htm', {
-							'title': 'Expresso'
-							})
-							@@include('_menuBtn.htm', {
-							'title': 'Flat White'
-							})
-							@@include('_menuBtn.htm', {
-							'title': 'Some else'
-							})
-						</div>
+					<div class='menu-slider__slider'>
+						@@include('_menuBtn.htm', {
+						'addClass': 'active',
+						'title': 'Cappuccino'
+						})
+						@@include('_menuBtn.htm', {
+						'title': 'Latte'
+						})
+						@@include('_menuBtn.htm', {
+						'title': 'Americano'
+						})
+						@@include('_menuBtn.htm', {
+						'title': 'Expresso'
+						})
+						@@include('_menuBtn.htm', {
+						'title': 'Flat White'
+						})
+						@@include('_menuBtn.htm', {
+						'title': 'Some else'
+						})
 					</div>
 					<button type="button" aria-label="previous element" class='menu-slider__next'>
 						<svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -108,12 +107,6 @@
 
 
 <script type="module" src="scripts/script.js"></script>
-
-<!-- Swiper -->
-<link rel="stylesheet" href="css/swiper-bundle.min.css">
-<script defer src="scripts/swiper-bundle.min.js"></script>
-<script type="module" src="scripts/sliders.js"></script>
-
 
 </html>
 

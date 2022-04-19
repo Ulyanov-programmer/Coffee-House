@@ -30,7 +30,7 @@ function recreate() {
 }
 
 
-let build = gulp.series(recreate, setupSwiperCss, setupSwiperJs, 
+let build = gulp.series(recreate, 
   gulp.parallel(scripts, css, html, images, fonts), fontsStyle);
   
 let watch = gulp.parallel(build, watchFIles, browserSyncFunc);

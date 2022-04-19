@@ -44,3 +44,16 @@ function increaseCounterValue() {
     counterValue = counterValue + parseInt(counter.step);
     counterValue >= 1 ? counter.value = `${counterValue}` : false;
 }
+let prevButton = document.querySelector('.menu-slider__prev');
+let nextButton = document.querySelector('.menu-slider__next');
+let menuSlider = document.querySelector('.menu-slider__slider');
+const heightOfMenuButton = document.querySelector('.menu-element').clientHeight;
+prevButton ? prevButton.addEventListener('click', scrollMenuToPrev) : false;
+nextButton ? nextButton.addEventListener('click', scrollMenuToNext) : false;
+function scrollMenuToPrev() {
+    let scrollValue = heightOfMenuButton * -1;
+    menuSlider.scrollBy(0, scrollValue);
+}
+function scrollMenuToNext() {
+    menuSlider.scrollBy(0, heightOfMenuButton);
+}
